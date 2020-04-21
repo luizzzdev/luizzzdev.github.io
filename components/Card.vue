@@ -22,8 +22,10 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { Vue, Component } from 'vue-property-decorator';
+
+@Component({
   props: {
     title: {
       type: String,
@@ -31,8 +33,8 @@ export default {
     },
     icon: {
       type: String,
-      required: true,
     },
   },
-};
+})
+export default class Card extends Vue {}
 </script>
